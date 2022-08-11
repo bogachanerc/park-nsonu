@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        *{
+            user-select: none;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+display: grid;
+grid-template-columns: 300px 1fr 1fr;
+grid-template-rows: 100px 600px 1000px 600px 200px ;
+grid-template-areas:"bir iki iki"
+                    "üc üc üc"
+                "dört dört dört"
+                "bes bes bes"
+                "altı altı altı";
+}
+
+.item{
+background-color: aquamarine;
+
+}
+.bir{
+grid-area: bir;
+background-color: rgb(93, 81, 81);
+}
+.iki{
+grid-area: iki;
+background-color: rgb(138, 163, 163);
+}
+
+.üc{
+grid-area: üc;
+background-color: rgb(138, 163, 163);
+}
+
+.dört{
+grid-area: dört;
+background-color: burlywood;
+}
+.bes{
+grid-area: bes;
+background-color: rgb(138, 163, 163);
+background-image: url(seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpg);
+}
+.altı{
+    grid-area: altı;
+    background-color: rgb(51, 54, 54);
+}
+.menu{
+z-index:2;
+position:fixed;
+width: 100%;
+height: 100px;
+background-color: rgb(51, 54, 54);
+}
+.menu ul{
+width:439px;
+margin-top: 24px;
+list-style: none;
+padding: 0;
+margin-left: 780px;
+}
+.menu li{
+display: inline-block;
+margin-right: 5px;
+border-radius: 5px;
+width: 100px;
+text-align: center;
+height: 50px;
+line-height:50px;
+background-color: #fff;
+transition: 0.8s;
+}
+.menubas{
+z-index: 2;
+position: fixed;
+width: 100%;
+height: 100px;
+background-color: rgb(51, 54, 54);
+}
+#cerceve > img{
+width: 70px;
+height: 70px;
+position: relative;
+left: 160px;
+bottom: 35px;
+user-select: none;
+}
+
+#cerceve > h2{
+    user-select: none;
+    font-size: 35px;
+    position: relative;
+    top: 23px;
+    left: 10px;
+}
+#cerceve{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    left: 20px;
+    top: 8px;
+    height: 80px;
+    width: 240px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#menum  a {
+    user-select: none;
+    text-decoration: none;
+   color: black;
+}
+#menum li:hover{
+    user-select: none;
+    background-color: black;
+    border-radius: 20px;
+}
+#menum a:hover{
+    user-select: none;
+    color: #fff;
+}
+#kutuiki{
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right:auto;
+    border: 1px solid black;
+    width: 40%;
+    height:200px;
+    background-color: black;
+}
+#kutuiki > h2 , h3{
+    user-select: none;
+    color: #fff;
+    text-align: center;
+}
+#kutuiki h2{
+    font-size: 90px;
+    margin-top: 10px;
+}
+#kutuiki h3{
+    margin-top: 10px;
+    font-size: 30px;
+}
+#genel{
+    z-index: 1;
+    border: 5px solid rgb(143, 131, 131);
+    width: 85%;
+    height: 450px;
+    background: rgb(205,205,231);
+    background: linear-gradient(90deg, rgba(205,205,231,1) 0%, rgba(224,218,233,1) 52%, rgba(215,220,241,1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 200px;
+}
+#genel h2{
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+.duzen img{
+    margin-left: 50px;
+    width: 180px;
+    height: 180px;
+}
+.duzen h3{
+    margin-top: 10px;
+    padding-left: 0px;
+    width: 300px;
+    color: black;
+}
+.birinci{
+    margin-top: 40px;
+    margin-left: 10px;
+    width: 300px;
+    height: 350px;
+}
+.birinci p{
+    user-select: none;
+    text-align: center;
+}
+.birinci .btn{
+    user-select: none;
+    margin-left:100px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.7s;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+}
+.btn:hover {
+  background: #f5f5f5;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.duzeniki{
+    position: relative;
+    bottom: 345px;
+    width: 300px;
+    height: 400px;
+    margin-left: 480px;
+    margin-top:0px;
+}
+.duzeniki img{
+    margin-left: 50px;
+    width: 180px;
+    height: 180px; 
+}
+.duzeniki h3{
+    margin-top: 10px;
+    padding-left: 0px;
+    width: 300px;
+    color: black;
+}
+.duzeniki p{
+    user-select: none;
+    text-align: center;
+    width: 300px;
+}
+.duzeniki .btn{
+    user-select: none;
+    margin-top: 16px;
+    margin-left:100px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.7s;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+}
+.duzeniki  .btn:hover{
+  background: #f5f5f5;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.duzenuc{
+    position: relative;
+    bottom: 740px;
+    width: 300px;
+    height: 400px;
+    margin-left: 970px;
+    
+}
+.duzenuc img{
+    margin-left: 50px;
+    width: 180px;
+    height: 180px; 
+}   
+.duzenuc h3{
+    margin-top: 2px;
+    padding-left: 0px;
+    width: 300px;
+    color: black;
+}
+.duzenuc p{
+    user-select: none;
+    text-align: center;
+    width: 300px;   
+}
+.duzenuc #btn{
+    user-select: none;
+    margin-left:100px;
+    margin-top: 20px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.7s;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+}
+.duzenuc #btn:hover{
+    background: #f5f5f5;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+
+#yesillik-yazi{
+    z-index:0;
+    background-image: url(IMG_8063\ \(1\).jpg);
+    height: 1000px;
+    position: relative;
+    bottom: 450px;
+}
+#yesil{
+    width: 800px;
+    height: 200px;
+    border: 1px rgb(66, 60, 60) solid;
+    background-color: rgb(44, 51, 57);
+    border-radius: 180px;
+    opacity: 0.7;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 450px;
+    text-align: center;
+    padding-top: 30px;
+}
+#yesil h2 , #yesil p {
+    color: rgb(4, 255, 4);
+    opacity: 1,5;
+}
+#yesil input{
+    margin-top: 10px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.7s;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    width: 90px;
+    height: 30px;   
+}
+#yesil input:hover{
+    background: #f5f5f5;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+#formum{
+    user-select: none;
+    border: 1px solid black;
+    background-color: rgb(175, 200, 200);
+    width: 50%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px ;
+}
+#formum h2{
+    text-align: center;
+}
+#isimb{
+    margin-left:100px;
+    margin-top: 60px;
+}
+#isim{
+    font-size: 20px;
+    width: 170px;
+    text-align: center;
+}
+#tbir{
+    height: 30px;
+}
+#soyadb{
+    margin-left: 500px;
+    position: relative;
+    bottom: 52px;
+}
+#soyad{
+    font-size: 20px;
+    width: 170px;
+    text-align: center;
+}
+#tiki{
+    height: 29px;
+}
+#mailb{
+    margin-left: 100px;
+}
+#mail{
+    font-size: 20px;
+    width: 170px;
+    text-align: center;
+}
+#tuc{
+    height: 30px;
+}
+#konub{
+    margin-left: 500px;
+    position:relative;
+    bottom: 40px;
+}
+#konu{
+    font-size: 20px;
+    width: 170px;
+    text-align: center;
+}
+#gonder{
+    margin-left: 300px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.7s;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;      
+}
+#gonder:hover{
+    background: #f5f5f5;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.son{
+    width: 40%;
+    margin: 10px auto auto auto;
+    height: 180px;
+    border: 1px floralwhite solid;
+    background-color: #fff;
+}
+.son h2{
+    text-align:center;
+    line-height: 50px;
+}
+.son p{
+    line-height: 60px;
+    text-align: center;
+}
+@media(max-width:896px) {
+.container{
+grid-template-columns: 120px 157px 157px;
+grid-template-rows: 60px 800px 700px 300px 300px 60px ;
+grid-template-areas:"bir iki iki"
+                    "üc üc üc"
+                "dört dört dört"
+                "bes bes bes"
+                "bes bes bes"
+                "altı altı altı";
+}
+
+.menubas{
+width: 120px;
+height: 60px;
+}
+
+.menu{
+width: 314px;
+height: 60px;
+}
+#cerceve > img{
+width: 30px;
+height: 30px;
+position: relative;
+left: 34px;
+top: 9px;
+}
+.menu > ul{
+margin-left: 0px;
+}
+
+#cerceve > h2{
+    font-size: 10px;
+    position: relative;
+    top: 5px;
+    left: 30px;
+}
+#cerceve{
+    border-radius: 10px;
+    position: relative;
+    left: 7px;
+    top: 5px;
+    width: 100px;
+    height: 50px;
+}
+#menum li{
+    
+    border-radius: 0;
+    width:60px;
+    height: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+#menum a{
+    font-size: 10px;
+    line-height: 30px;
+}
+
+#menum{
+    padding: 0;
+    
+    position: relative;
+    width: 260px;
+    bottom: 10px;
+    left: 57px;
+}
+#menum li:nth-child(2){
+    position: relative;
+    right: 5px;
+}
+#menum li:nth-child(3){
+    position: relative;
+    right: 10px;
+}
+#menum li:nth-child(4){
+    position: relative;
+    right:16px;
+}
+#menum a:hover{
+    color: #fff;
+}
+#kutuiki{
+    margin-top: 40px;
+    width: 230px;
+    height: 100px;
+}
+#kutuiki h2{
+    font-size: 30px;
+}
+#kutuiki h3{
+    font-size: 15px;
+}
+#genel{
+    bottom: 600px;
+    width: 90%;
+    height: 1000px;
+}
+.duzen img{
+    width: 100px;
+    height: 100px;
+    margin-left: 110px;
+}
+.duzen h3{
+    margin-left: 10px;
+}
+.duzen p{
+    margin-left: 30px;
+}
+.birinci .btn{
+    user-select: none;
+    margin-left:120px;
+    background: black;
+    border-radius: 5px;
+    transition: 0.7s;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+}
+.birinci .btn:hover{
+  background: #f5f5f5;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.duzeniki{
+    position: relative;
+    top: 5px;
+    right: 450px;
+}
+.duzeniki img{
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+}
+.duzenuc{
+    position: relative;
+    bottom: 100px;
+    right: 930px;
+}
+.duzenuc img{
+    width: 100px;
+    height: 100px;
+    margin-left: 90px;
+}
+#yesillik-yazi{
+    position: relative;
+    bottom: 1000px;
+}
+#yesil{
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+#isimb{
+    margin-right: 400px;
+}
+.item .altı{
+    width: 100%;
+    height: 200px;
+    background-color: coral;
+}
+#formum{
+    
+    
+    height: 550px;
+    width: 80%;
+}
+#formum h2{
+    position: relative;
+    top: 250px;
+}
+#isimb , #mailb{
+    position: relative;
+    top: 200px;
+    right:90px;
+}
+#soyadb , #konub{
+    position: relative;
+    right: 300px;
+    top: 149px;
+}
+#isim , #soyad , #mail , #konu{
+    font-size: 15px;
+    text-align: center;
+    width: 120px;
+}
+#tbir, #tiki,#tuc,#tdort{
+    width: 120px;
+}
+#gonder{
+    position: relative;
+    top: 170px;
+    right: 180px;
+    width: 90px;
+    height: 30px;
+}
+/* #yazi{
+    border: 1px solid blue;
+    width: 200px;
+    padding: 0;
+    height: 60px ;
+} */
+.son{
+    background-color: #fff;
+    margin-top: 5px;
+    height: 48px;
+}
+.son h2{
+    font-size: 13px;
+    line-height: 18px;
+}
+.son p{
+    font-size: 8px;
+    line-height: 10px;
+}
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+       
+        <div class="item bir" >
+            
+            <div class="menubas">
+                <div id="cerceve">
+                <h2>Co-Park</h2>
+                <img src="WhatsApp Image 2022-01-18 at 17.55.44.jpeg" alt="resim">
+                </div>
+            </div>
+        </div>
+        <div class="item iki">
+            <div class="menu">
+                <ul id="menum">
+                    <li>
+                      <a href="#"><p>Anasayfa</p></a> 
+                    </li>
+                    <li>
+                      <a href="#"><p>Hizmetler</p></a>
+                    </li>
+                    <li>
+                       <a href="#"><p>Hakkımızda</p></a>
+                    </li>
+                    <li>
+                       <a href="#"><p>İletişim</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="item üc" >
+            <div id="kutuiki">
+                <h2>Co-Park</h2>
+                <h3>Otomobilinizin Co-Pilotu</h3>
+            </div>
+        </div>
+        <div class="item dört">
+            <div id="genel">
+                <h2>-Hizmetlerimiz-</h2>
+                <div class="duzen">
+                    <div class="birinci">
+                    <img src="payment (1).png" alt="res1">
+                    <h3>Dijital Ödeme</h3>
+                    <p>Otopark ücretini ödemek artık çok kolay!
+                    <br> Mobil ödeme altyapımız sayesinde tek tıkla uygulama üstünden ödeme kolaylığı.</p> <br>
+                    <input class="btn" type="submit" value="Devamı"> 
+                    </div>  
+                </div>
+                <div class="duzeniki">
+                    <img id="iki" src="electric-car (2).png" alt="resim2">
+                    <h3 id="yaziki" >Otopark Özellikleri</h3>
+                    <p id="parag" >Otoparkların engelli park yeri,elektrikli şarj ünitesi  
+                    gibi özelliklerini görüntüleyip ihtiyacınıza göre otopark seçebilirsiniz.</p>
+                    <input class="btn" id="yenbutton" type="submit" value="Devamı">
+                </div>
+                <div class="duzenuc">
+                    <img id="resim3" src="reserved (1).png" alt="resim3">
+                    <h3 id="son" >Rezervasyon</h3>
+                    <p id="sonparag" >Kalabalık lokasyonlarda planladığınız saatlerde yerinizi önceden ayırtarak vakit kaybından kurtulun.</p>
+                    <input id="btn" type="submit" value="Devamı">
+                </div>
+            </div>
+            <div id="yesillik-yazi">
+                <div id="yesil">
+                <h2>Ağaçlarımızı Koruyoruz</h2>
+                <p>Co-park olarak özellikle büyük şehirlerdeki otopark sorununa akıllı şehirler kapsamında sürdürülebilir bir çözüm sağlıyoruz.Araçlar park yeri ararken ciddi miktarda yakıt tüketiyorlar ve karbon salgılıyorlar.Temel amacımız bu tüketimi ve salınımı azaltarak sürdürülebilir çevre amacına destek olmak.Aynı zamanda otopark giriş-çıkışlarındaki fatura,kart vb. belgeleri tamamen dijitalleştirerek atıkları azaltıyoruz.Sürdürülebilir bir Dünya için çalışıyoruz.</p>
+                <input type="submit" value="Devamı">
+                </div>
+            </div>   
+        </div>
+        <div class="item bes">
+            <div id="formum">
+                <h2>-Bize Ulaşın-</h2>
+                <div id="isimb">
+                <p id="isim" >Ad*</p>
+                <input type="text" id="tbir">
+                </div>
+                <div id="soyadb">
+                <p id="soyad" >Soyad*</p>
+                <input type="text" id="tiki">
+                </div>
+                <div id="mailb">
+                <p id="mail" >E-mail*</p>
+                <input type="email" id="tuc" required >
+                </div>
+                <div id="konub">
+                <p id="konu" >Konu</p>
+                <textarea  id="tdort" cols="22" rows="2"></textarea>
+                </div>
+                <button id="gonder" >Gönder</button>
+            </div>
+        </div>
+        <div class="item altı">
+                <div class="son">
+                        <h2>İletişim</h2>
+                        <p>E-mail: ercanb20@itu.edu.tr</p>
+                        <p>Linkedln: Co-Park</p>
+                </div>
+        </div>
+        </div>
+    </nav>    
+</body>
+</html>
